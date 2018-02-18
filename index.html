@@ -34,7 +34,7 @@ FROM shiftplan_notifications
 WHERE employment_ids @> ARRAY[?];</pre></li><li><pre>(cost=0.00..60555.66 rows=159 width=4)</pre></li></ul></article><article><h2>INDEXES</h2><ul class="build"><li><pre>CREATE INDEX shiftplan_notifications__employment_ids
 ON shiftplan_notifications (employment_ids);</pre></li></ul></article><article><h2>INDEXES</h2><ul class="build"><li><pre>SELECT id
 FROM shiftplan_notifications
-WHERE shift_id = ?;</pre></li><li><pre>(cost=0.00..60555.66 rows=159 width=4)</pre></li><li><pre>(cost=0.00..60555.66 rows=159 width=4)</pre></li></ul></article><article class="image" data-src="node_modules/lets-talk-about--template/assets/memes/fuuuuu.jpg"></article><article><h2>INDEXES</h2><ul class="build"><li><pre>CREATE INDEX shiftplan_notifications__employment_ids
+WHERE employment_ids @> ARRAY[?];</pre></li><li><pre>(cost=0.00..60555.66 rows=159 width=4)</pre></li><li><pre>(cost=0.00..60555.66 rows=159 width=4)</pre></li></ul></article><article class="image" data-src="node_modules/lets-talk-about--template/assets/memes/fuuuuu.jpg"></article><article><h2>INDEXES</h2><ul class="build"><li><pre>CREATE INDEX shiftplan_notifications__employment_ids
 ON shiftplan_notifications
 USING GIN (employment_ids);</pre></li></ul></article><article><h2>INDEXES</h2><ul class="build"><li><pre>SELECT id
 FROM shiftplan_notifications

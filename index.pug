@@ -412,7 +412,7 @@ html
             pre
               | SELECT id
               | FROM shiftplan_notifications
-              | WHERE shift_id = ?;
+              | WHERE employment_ids @> ARRAY[?];
           li
             pre
               | (cost=0.00..60555.66 rows=159 width=4)
