@@ -1,0 +1,14 @@
+{
+  "name": "lets-talk-about---sql-query-performance",
+  "description": "Lets talk about ... SQL Query Performance",
+  "author": "Tamino Martinius",
+  "homepage": "https://github.com/tamino-martinius/lets-talk-about--sql-query-performance",
+  "private": true,
+  "scripts": {
+    "start": "build-slides"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "lets-talk-about--template": "^1.0.1"
+  }
+}
