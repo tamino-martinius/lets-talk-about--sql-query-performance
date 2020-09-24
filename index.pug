@@ -174,7 +174,8 @@ html
 
           ActiveRecord::Base.connection.execute('SELECT count(id) FROM staff_shifts').to_a; nil
 
-      article.image(data-src="node_modules/lets-talk-about--template/assets/memes/fuuuuu.jpg")
+      article
+        img.bg(src="node_modules/lets-talk-about--template/assets/memes/fuuuuu.jpg")
 
       article
         h2 LIMIT COUNT (done right)
@@ -414,7 +415,8 @@ html
             pre
               | (cost=0.00..60555.66 rows=159 width=4)
 
-      article.image(data-src="node_modules/lets-talk-about--template/assets/memes/fuuuuu.jpg")
+      article
+        img.bg(src="node_modules/lets-talk-about--template/assets/memes/fuuuuu.jpg")
 
       article
         h2 INDEXES

@@ -8,7 +8,7 @@ LIMIT 100;</pre></li><li><pre>(cost=0.00..2.27 rows=100 width=74)</pre></li><li>
 FROM staff_shifts;</pre></li><li><pre>(cost=147712.34..147712.35 rows=1 width=0)</pre></li><li><pre>(1171.2ms)  SELECT count(*) FROM staff_shifts</pre></li></ul></article><article><h2>COUNT</h2><ul><li><pre>SELECT COUNT(id)
 FROM staff_shifts;</pre></li><li><pre>(cost=147712.34..147712.35 rows=1 width=4)</pre></li><li><pre>(1481.2ms)  SELECT count(id) FROM staff_shifts</pre></li></ul></article><article><h2>LIMIT COUNT</h2><ul><li><pre>SELECT COUNT(*)
 FROM staff_shifts
-LIMIT 1000;</pre></li><li><pre>(cost=147712.34..147712.35 rows=1 width=0)</pre></li><li><pre>(1171.2ms)  SELECT count(*) FROM staff_shifts</pre></li></ul></article><article class="image" data-src="node_modules/lets-talk-about--template/assets/memes/fuuuuu.jpg"></article><article><h2>LIMIT COUNT (done right)</h2><ul><li><pre>SELECT COUNT(*) FROM (
+LIMIT 1000;</pre></li><li><pre>(cost=147712.34..147712.35 rows=1 width=0)</pre></li><li><pre>(1171.2ms)  SELECT count(*) FROM staff_shifts</pre></li></ul></article><article><img class="bg" src="/fuuuuu.d08a19f5.jpg"></article><article><h2>LIMIT COUNT (done right)</h2><ul><li><pre>SELECT COUNT(*) FROM (
   SELECT id
   FROM staff_shifts
   LIMIT 1000
@@ -34,7 +34,7 @@ FROM shiftplan_notifications
 WHERE employment_ids @> ARRAY[?];</pre></li><li><pre>(cost=0.00..60555.66 rows=159 width=4)</pre></li></ul></article><article><h2>INDEXES</h2><ul class="build"><li><pre>CREATE INDEX shiftplan_notifications__employment_ids
 ON shiftplan_notifications (employment_ids);</pre></li></ul></article><article><h2>INDEXES</h2><ul class="build"><li><pre>SELECT id
 FROM shiftplan_notifications
-WHERE employment_ids @> ARRAY[?];</pre></li><li><pre>(cost=0.00..60555.66 rows=159 width=4)</pre></li><li><pre>(cost=0.00..60555.66 rows=159 width=4)</pre></li></ul></article><article class="image" data-src="node_modules/lets-talk-about--template/assets/memes/fuuuuu.jpg"></article><article><h2>INDEXES</h2><ul class="build"><li><pre>CREATE INDEX shiftplan_notifications__employment_ids
+WHERE employment_ids @> ARRAY[?];</pre></li><li><pre>(cost=0.00..60555.66 rows=159 width=4)</pre></li><li><pre>(cost=0.00..60555.66 rows=159 width=4)</pre></li></ul></article><article><img class="bg" src="/fuuuuu.d08a19f5.jpg"></article><article><h2>INDEXES</h2><ul class="build"><li><pre>CREATE INDEX shiftplan_notifications__employment_ids
 ON shiftplan_notifications
 USING GIN (employment_ids);</pre></li></ul></article><article><h2>INDEXES</h2><ul class="build"><li><pre>SELECT id
 FROM shiftplan_notifications
